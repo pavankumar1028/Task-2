@@ -1,49 +1,75 @@
-body {  
-  font-family: Arial, sans-serif;  
-  margin: 0;  
-  padding: 0;  
-}  
-
-.container {  
-  max-width: 500px;  
-  margin: 50px auto;  
-  padding: 20px;  
-  border: 1px solid #ccc;  
-  border-radius: 5px;  
-}  
-
-h1 {  
-  text-align: center;  
-  color: #1e0bed;  
-}  
-
-input[type="text"] {  
-  width: 70%;  
-  padding: 8px;  
-  margin-right: 10px;  
-  border: 1px solid #ccc;  
-  border-radius: 5px;  
-}  
-
-button {  
-  padding: 8px 15px;  
-  border: none;  
-  background-color: #4CAF50;  
-  color: white;  
-  border-radius: 5px;  
-  cursor: pointer;  
-}  
-
-ul {  
-  list-style-type: none;  
-  padding: 0;  
-}  
-
-li {  
-  margin: 10px 0;  
-}  
-
-.completed {  
-  text-decoration: line-through;  
-  color: #888;  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 400px;
+  padding: 2em;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  display: block;
+  outline: none;
+}
+
+.output {
+  margin-top: 2em;
+}
+
+/* JavaScript */
+.todo {
+  border-left: 4px solid rgb(34, 187, 51);
+  color: rgb(75, 75, 75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  font-size: 1em;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.delete {
+  color: blueviolet;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message-container {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  background-color: white;
+  padding: 20px;
+  transform: translateX(0);
+  visibility: hidden;
+  transition: transform 1s ease;
+}
+
+.success {
+  transform: translateX(100px);
+  visibility: visible;
+  background-color: rgb(34, 187, 51);
+  color: white;
+}
+
+.error {
+  transform: translateX(100px);
+  visibility: visible;
+  background-color: rgb(223, 71, 89);
+  color: #fff;
+}
+ 
